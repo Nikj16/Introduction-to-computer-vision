@@ -2,7 +2,13 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name="image_utils",
+    name="imageutils",
     version="1.0",
-    packages=find_packages(include=['image_utils', 'image_utils.*']),
+    author = "Nikhil Jaiyam",
+    author_email = "nikhiljaiyam6@gmail.com",
+    packages=find_packages(),
+    install_requires = [
+        'numpy == 1.17.4',
+        'matplotlib == 3.1.2'
+    ]
 )

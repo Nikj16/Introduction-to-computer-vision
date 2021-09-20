@@ -9,3 +9,6 @@ def open_image(path, type):
         image = cv2.cvtColor(image_buffer,cv2.COLOR_BGR2GRAY)
     
     return image
+
+if __name__ == "__main__":
+    main()
