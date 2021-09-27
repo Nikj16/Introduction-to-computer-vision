@@ -10,5 +10,11 @@ def open_image(path, type):
     
     return image
 
+def add_noise(mu, sigma, image):
+    noise =np.random.normal(mu,sigma,image.shape)
+    noisy_image = image + noise
+    return noisy_image
+    
+
 if __name__ == "__main__":
     main()
