@@ -8,7 +8,7 @@ setup(
     author_email = "nikhiljaiyam6@gmail.com",
     packages=find_packages(),
     install_requires = [
-        'numpy == 1.17.4',
-        'matplotlib == 3.1.2'
+        'numpy == 1.19.5',
+        'matplotlib == 3.2.1'
     ]
 )
