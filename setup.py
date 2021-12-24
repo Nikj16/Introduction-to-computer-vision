@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name="imageutils",
+    name="imagetitan",
     version="1.0",
     author = "Nikhil Jaiyam",
     author_email = "nikhiljaiyam6@gmail.com",
