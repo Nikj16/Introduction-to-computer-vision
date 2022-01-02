@@ -1,9 +1,9 @@
 import cv2 as cv2
 import numpy as np
 
-def open_image(path, type):
+def open_image(path, image_type=None):
     image_buffer = cv2.imread(path)
-    if (type=='color'):
+    if (image_type=='color'):
         image = cv2.cvtColor(image_buffer,cv2.COLOR_BGR2RGB)
     else:
         image = cv2.cvtColor(image_buffer,cv2.COLOR_BGR2GRAY)

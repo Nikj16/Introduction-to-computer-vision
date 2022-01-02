@@ -9,6 +9,9 @@ setup(
     packages=find_packages(),
     install_requires = [
         'numpy == 1.19.5',
-        'matplotlib == 3.2.1'
+        'matplotlib == 3.2.1',
+        'PyQt5',
+        'jupyterlab',
+        'ipympl'
     ]
 )
