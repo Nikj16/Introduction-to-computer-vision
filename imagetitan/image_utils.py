@@ -50,7 +50,6 @@ def correlate_kernel(image, kernel, convolve=False):
     #padding the image with zeros so we can perform convolution on border pixels
     image = zero_padding(image, k_span)
     print("image height is:", img_height, "& image with is:", img_width)
-    kernel_sum = np.sum(np.concatenate(kernel))
     result = np.zeros_like(image)
     
     #perform the actual convolution
@@ -58,14 +57,15 @@ def correlate_kernel(image, kernel, convolve=False):
         for j in range( k_span, img_height + k_span):
             #roi is the region of interest
             roi =image[j-k_span:j+ k_span+1,i-k_span:i+k_span+1]
-#             roi =image[k_span:-k_span,k_span:-k_span]
             #kernel multiplication along with normalization:
-            result[j,i] = np.sum(np.concatenate(roi * kernel/kernel_sum))
+            result[j,i] = np.sum(np.concatenate(roi * kernel))
     
     
     return result[k_span: -k_span, k_span: - k_span]
 
-
+def normalise(image):
+    normalize = (image-image.min())/(image.max()-image.min())
+    return normalize
 
 
 
