@@ -57,7 +57,7 @@ def correlate_kernel(image, kernel, convolve=False):
         for j in range( k_span, img_height + k_span):
             #roi is the region of interest
             roi =image[j-k_span:j+ k_span+1,i-k_span:i+k_span+1]
-            #kernel multiplication along with normalization:
+            #kernel multiplication along without normalization:
             result[j,i] = np.sum(np.concatenate(roi * kernel))
     
     
